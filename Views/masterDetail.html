@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{droneName}} - Drone Details</title>
+    <link rel="stylesheet" href="/Views/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🚁</span>
+                <span class="logo-text">Drone Catalog</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Catalog</a>
+                <a href="/addNewDrone" class="nav-link add-drone-btn">
+                    <span>+</span> Add New Drone
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <a href="/">← Back to Catalog</a>
+        </div>
+
+        <!-- Drone Detail Container -->
+        <div class="detail-container">
+            <!-- Left Side - Image Gallery -->
+            <div class="detail-image-section">
+                <div class="main-image">
+                    <img src="{{imagePath}}" alt="{{droneName}}">
+                </div>
+                <div class="image-badge">
+                    <span class="badge-color">{{colorOptions}}</span>
+                </div>
+            </div>
+
+            <!-- Right Side - Information -->
+            <div class="detail-info-section">
+                <h1 class="detail-title">{{droneName}}</h1>
+                <p class="detail-manufacturer">by {{manufacturer}}</p>
+
+                <div class="detail-price-section">
+                    <span class="detail-price">€{{price}}</span>
+                    <span class="detail-availability">In Stock</span>
+                </div>
+
+                <div class="detail-description">
+                    <h3>Description</h3>
+                    <p>{{description}}</p>
+                </div>
+
+                <!-- Technical Specifications Grid -->
+                <div class="specs-section">
+                    <h3>Technical Specifications</h3>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-icon">⏱️</span>
+                            <div class="spec-content">
+                                <span class="spec-label">Flight Time</span>
+                                <span class="spec-value">{{flightTime}} minutes</span>
+                            </div>
+                        </div>
+
+                        <div class="spec-item">
+                            <span class="spec-icon">📡</span>
+                            <div class="spec-content">
+                                <span class="spec-label">Max Range</span>
+                                <span class="spec-value">{{maxRange}} meters</span>
+                            </div>
+                        </div>
+
+                        <div class="spec-item">
+                            <span class="spec-icon">⚡</span>
+                            <div class="spec-content">
+                                <span class="spec-label">Max Speed</span>
+                                <span class="spec-value">{{maxSpeed}} km/h</span>
+                            </div>
+                        </div>
+
+                        <div class="spec-item">
+                            <span class="spec-icon">⚖️</span>
+                            <div class="spec-content">
+                                <span class="spec-label">Weight</span>
+                                <span class="spec-value">{{weight}} grams</span>
+                            </div>
+                        </div>
+
+                        <div class="spec-item">
+                            <span class="spec-icon">📷</span>
+                            <div class="spec-content">
+                                <span class="spec-label">Camera</span>
+                                <span class="spec-value">{{camera}}</span>
+                            </div>
+                        </div>
+
+                        <div class="spec-item">
+                            <span class="spec-icon">🎨</span>
+                            <div class="spec-content">
+                                <span class="spec-label">Color Options</span>
+                                <span class="spec-value">{{colorOptions}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Availability Section -->
+                <div class="availability-section">
+                    <h3>Available at These Locations</h3>
+                    <div class="shop-list">
+                        {{shopsList}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Drone Catalog. All rights reserved.</p>
+    </footer>
+</body>
+</html>

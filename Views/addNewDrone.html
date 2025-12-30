@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Drone - Drone Catalog</title>
+    <link rel="stylesheet" href="/Views/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚁 Add New Drone</h1>
+            <p>Fill in the details below to add a new drone to the catalog</p>
+            <a href="/" class="nav-link">← Back to Catalog</a>
+        </div>
+
+        <form method="POST" action="addNewDrone" enctype="multipart/form-data">
+            <!-- Basic Information -->
+            <div class="form-section">
+                <h2>📋 Basic Information</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Drone Name <span class="required">*</span></label>
+                        <input type="text" name="name" required placeholder="e.g., DJI Mavic 3 Pro">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Manufacturer <span class="required">*</span></label>
+                        <input type="text" name="manufacturer" required placeholder="e.g., DJI">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Price (€) <span class="required">*</span></label>
+                        <input type="number" name="price" step="0.01" required placeholder="0.00">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Color <span class="required">*</span></label>
+                        <select name="colors" required>
+                            <option value="">-- Select color --</option>
+                            <option value="White">White</option>
+                            <option value="Black">Black</option>
+                            <option value="Grey">Grey</option>
+                            <option value="Red">Red</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Orange">Orange</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Description</label>
+                        <textarea name="description" placeholder="Describe the drone's features and capabilities..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Specifications -->
+            <div class="form-section">
+                <h2>⚙️ Technical Specifications</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Flight Time (minutes)</label>
+                        <input type="number" name="flightTime" placeholder="e.g., 30">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Max Range (meters)</label>
+                        <input type="number" name="maxRange" placeholder="e.g., 10000">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Max Speed (km/h)</label>
+                        <input type="number" name="maxSpeed" step="0.1" placeholder="e.g., 75.6">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Weight (grams)</label>
+                        <input type="number" name="weight" step="0.1" placeholder="e.g., 895">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Camera Resolution</label>
+                        <input type="text" name="camera" placeholder="e.g., 4K/60fps">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Availability -->
+            <div class="form-section">
+                <h2>📍 Availability</h2>
+                <div class="form-group">
+                    <label>Available Shops</label>
+                    <textarea name="shops" placeholder="Zagreb - Ulica Kralja Tomislava IV, Split - Marmontova 15"></textarea>
+                    <div class="input-hint">Separate multiple shops with commas</div>
+                </div>
+            </div>
+
+            <!-- Image Upload -->
+            <div class="form-section">
+                <h2>📸 Drone Image</h2>
+                <div class="form-group">
+                    <label>Upload Image</label>
+                    <input type="file" name="image" accept="image/*">
+                    <div class="input-hint">Supported formats: JPG, PNG, WEBP (max 10MB)</div>
+                </div>
+            </div>
+
+            <!-- Submit Buttons -->
+            <div class="button-group">
+                <a href="/" class="cancel-btn">Cancel</a>
+                <button type="submit">
+                    <span class="icon">✓</span>
+                    Add Drone to Catalog
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

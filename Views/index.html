@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Catalog - Professional Drones</title>
+    <link rel="stylesheet" href="/Views/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🚁</span>
+                <span class="logo-text">Drone Catalog</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link active">Catalog</a>
+                <a href="/addNewDrone" class="nav-link add-drone-btn">
+                    <span>+</span> Add New Drone
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="page-header">
+            <h1>Professional Drone Catalog</h1>
+            <p class="subtitle">Explore our collection of high-quality drones</p>
+        </div>
+
+        <div class="droneCatalogue">
+            {{droneCards}}
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Drone Catalog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
