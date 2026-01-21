@@ -27,15 +27,15 @@ body {
     text-align: center;
 }
 
-    .header h1 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
 
-    .header p {
-        opacity: 0.9;
-        font-size: 1rem;
-    }
+.header p {
+    opacity: 0.9;
+    font-size: 1rem;
+}
 
 .nav-link {
     display: inline-block;
@@ -48,9 +48,9 @@ body {
     transition: background 0.3s;
 }
 
-    .nav-link:hover {
-        background: rgba(255, 255, 255, 0.3);
-    }
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
 
 form {
     padding: 40px;
@@ -60,13 +60,13 @@ form {
     margin-bottom: 30px;
 }
 
-    .form-section h2 {
-        font-size: 1.3rem;
-        color: #667eea;
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #f0f0f0;
-    }
+.form-section h2 {
+    font-size: 1.3rem;
+    color: #667eea;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
 
 .form-grid {
     display: grid;
@@ -78,9 +78,9 @@ form {
     margin-bottom: 20px;
 }
 
-    .form-group.full-width {
-        grid-column: 1 / -1;
-    }
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
 
 label {
     display: block;
@@ -90,9 +90,9 @@ label {
     font-size: 0.95rem;
 }
 
-    label .required {
-        color: #e74c3c;
-    }
+label .required {
+    color: #e74c3c;
+}
 
 input[type="text"],
 input[type="number"],
@@ -108,15 +108,15 @@ textarea {
     background: #fafafa;
 }
 
-    input[type="text"]:focus,
-    input[type="number"]:focus,
-    select:focus,
-    textarea:focus {
-        outline: none;
-        border-color: #667eea;
-        background: white;
-        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-    }
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
 
 textarea {
     min-height: 100px;
@@ -133,10 +133,10 @@ input[type="file"] {
     transition: all 0.3s;
 }
 
-    input[type="file"]:hover {
-        border-color: #667eea;
-        background: #f0f4ff;
-    }
+input[type="file"]:hover {
+    border-color: #667eea;
+    background: #f0f4ff;
+}
 
 select {
     cursor: pointer;
@@ -175,14 +175,14 @@ button[type="submit"] {
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
-    button[type="submit"]:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-    }
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
 
-    button[type="submit"]:active {
-        transform: translateY(0);
-    }
+button[type="submit"]:active {
+    transform: translateY(0);
+}
 
 .cancel-btn {
     flex: 0 0 auto;
@@ -200,9 +200,9 @@ button[type="submit"] {
     text-align: center;
 }
 
-    .cancel-btn:hover {
-        background: #e0e0e0;
-    }
+.cancel-btn:hover {
+    background: #e0e0e0;
+}
 
 @media (max-width: 768px) {
     .form-grid {
@@ -227,10 +227,6 @@ button[type="submit"] {
     margin-right: 8px;
 }
 
-
-/* ==========================================
-   NAVIGATION BAR
-   ========================================== */
 .navbar {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -277,13 +273,13 @@ button[type="submit"] {
     font-weight: 500;
 }
 
-    .nav-link:hover {
-        background: rgba(255, 255, 255, 0.2);
-    }
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
 
-    .nav-link.active {
-        background: rgba(255, 255, 255, 0.25);
-    }
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.25);
+}
 
 .add-drone-btn {
     background: rgba(255, 255, 255, 0.9);
@@ -294,19 +290,16 @@ button[type="submit"] {
     gap: 5px;
 }
 
-    .add-drone-btn span {
-        font-size: 1.2rem;
-    }
+.add-drone-btn span {
+    font-size: 1.2rem;
+}
 
-    .add-drone-btn:hover {
-        background: white;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
+.add-drone-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
-/* ==========================================
-   PAGE LAYOUT
-   ========================================== */
 .page-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -319,20 +312,17 @@ button[type="submit"] {
     margin-bottom: 50px;
 }
 
-    .page-header h1 {
-        font-size: 2.5rem;
-        color: #333;
-        margin-bottom: 10px;
-    }
+.page-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
 
 .subtitle {
     font-size: 1.2rem;
-    color: #666;
+    color: white;
 }
 
-/* ==========================================
-   DRONE CATALOGUE GRID
-   ========================================== */
 .droneCatalogue {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -340,9 +330,6 @@ button[type="submit"] {
     margin-bottom: 50px;
 }
 
-/* ==========================================
-   DRONE CARD
-   ========================================== */
 .droneCard {
     background: white;
     border-radius: 12px;
@@ -354,18 +341,18 @@ button[type="submit"] {
     display: block;
 }
 
-    .droneCard:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-    }
+.droneCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
 
-    .droneCard img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        background: #f5f5f5;
-        border-bottom: 3px solid #667eea;
-    }
+.droneCard img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: #f5f5f5;
+    border-bottom: 3px solid #667eea;
+}
 
 .drone-info {
     padding: 20px;
@@ -387,9 +374,9 @@ button[type="submit"] {
     font-size: 0.95rem;
 }
 
-    .drone-detail:last-child {
-        border-bottom: none;
-    }
+.drone-detail:last-child {
+    border-bottom: none;
+}
 
 .detail-label {
     color: #666;
@@ -421,9 +408,6 @@ button[type="submit"] {
     font-weight: bold;
 }
 
-/* ==========================================
-   FOOTER
-   ========================================== */
 .footer {
     background: #2c3e50;
     color: white;
@@ -432,14 +416,11 @@ button[type="submit"] {
     margin-top: auto;
 }
 
-    .footer p {
-        margin: 0;
-        opacity: 0.9;
-    }
+.footer p {
+    margin: 0;
+    opacity: 0.9;
+}
 
-/* ==========================================
-   RESPONSIVE DESIGN
-   ========================================== */
 @media (max-width: 1200px) {
     .droneCatalogue {
         grid-template-columns: repeat(2, 1fr);
@@ -492,9 +473,6 @@ button[type="submit"] {
     }
 }
 
-/* ==========================================
-   EMPTY STATE (when no drones)
-   ========================================== */
 .empty-state {
     text-align: center;
     padding: 80px 20px;
@@ -529,34 +507,31 @@ button[type="submit"] {
     transition: all 0.3s;
 }
 
-    .empty-state a:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-    }
+.empty-state a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
 
-/* ==========================================
-   DRONE DETAILS PAGE
-   ========================================== */
 
 .breadcrumb {
     margin-bottom: 30px;
 }
 
-    .breadcrumb a {
-        color: #667eea;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 1rem;
-        transition: all 0.3s;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
+.breadcrumb a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     }
 
-        .breadcrumb a:hover {
-            color: #764ba2;
-            transform: translateX(-5px);
-        }
+.breadcrumb a:hover {
+    color: #764ba2;
+    transform: translateX(-5px);
+}
 
 .detail-container {
     display: grid;
@@ -569,7 +544,6 @@ button[type="submit"] {
     margin-bottom: 50px;
 }
 
-/* Image Section */
 .detail-image-section {
     position: relative;
 }
@@ -582,12 +556,12 @@ button[type="submit"] {
     background: #f5f5f5;
 }
 
-    .main-image img {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-        display: block;
-    }
+.main-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
 
 .image-badge {
     position: absolute;
@@ -604,7 +578,6 @@ button[type="submit"] {
     color: #667eea;
 }
 
-/* Info Section */
 .detail-info-section {
     display: flex;
     flex-direction: column;
@@ -661,7 +634,6 @@ button[type="submit"] {
     font-size: 1.05rem;
 }
 
-/* Specifications Grid */
 .specs-section h3 {
     color: #333;
     font-size: 1.3rem;
@@ -685,10 +657,10 @@ button[type="submit"] {
     transition: all 0.3s;
 }
 
-    .spec-item:hover {
-        background: #e8ecff;
-        transform: translateX(5px);
-    }
+.spec-item:hover {
+    background: #e8ecff;
+    transform: translateX(5px);
+}
 
 .spec-icon {
     font-size: 1.8rem;
@@ -711,7 +683,6 @@ button[type="submit"] {
     font-weight: 600;
 }
 
-/* Availability Section */
 .availability-section h3 {
     color: #333;
     font-size: 1.3rem;
@@ -743,7 +714,6 @@ button[type="submit"] {
     font-weight: 500;
 }
 
-/* Action Buttons */
 .action-buttons {
     display: flex;
     gap: 15px;
@@ -770,19 +740,19 @@ button[type="submit"] {
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
-    .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-    }
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
 
 .btn-secondary {
     background: #f0f0f0;
     color: #666;
 }
+.btn-secondary:hover {
+    background: #e0e0e0;
+}
 
-    .btn-secondary:hover {
-        background: #e0e0e0;
-    }
 @media (max-width: 1024px) {
     .detail-container {
         grid-template-columns: 1fr;

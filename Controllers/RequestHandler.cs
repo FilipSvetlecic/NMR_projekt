@@ -8,8 +8,6 @@ namespace NMR_projekt.Controllers
     {
         public void HandleAllRequests(string method, string receivedRequest, Socket clientSocket, byte[] buffer)
         {
-            // urlParams - behind ?
-            // urlRoute - before ?
             string urlRoute, urlParams, responseRoute;
             urlRoute = receivedRequest.Trim().Split(" ")[1];
 
@@ -25,24 +23,20 @@ namespace NMR_projekt.Controllers
 
             responseRoute = GetFullRoute(urlRoute);
             var contentType = GetContentType(responseRoute);
-            Console.WriteLine("Response route: " + responseRoute);
 
             if (method == "GET")
             {
                 byte[] sentResponse;
 
-                // sends an image to user
                 if (responseRoute.Contains("Images"))
                 {
                     sentResponse = GetHandler.GetImage(responseRoute);
                 }
-                // sends all other files to user
                 else
                 {
                     string response = GetHandler.GetData(urlRoute, urlParams, responseRoute);
                     sentResponse = Encoding.UTF8.GetBytes(response);
                 }
-
                 string responseHeader = GetHeader(contentType, sentResponse);
                 clientSocket.Send(Encoding.UTF8.GetBytes(responseHeader));
                 clientSocket.Send(sentResponse);
@@ -50,10 +44,7 @@ namespace NMR_projekt.Controllers
 
             if (method == "POST")
             {
-                // parsing the request and saving it into the database
                 PostHandler.ProcessDroneAdding(receivedRequest, buffer, urlRoute);
-
-                // redirect the user to the home page
                 clientSocket.Send(Encoding.UTF8.GetBytes(GetRedirectHeader()));
                 return;
             }

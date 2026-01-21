@@ -12,7 +12,6 @@ namespace NMR_projekt.Controllers
             string projectRoot = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
             projectRoot = projectRoot.Replace("bin\\Debug", "");
             string viewsDirectory = Path.Combine(projectRoot, "Views");
-            // Return HTML files
             if (urlRoute.Contains("addNewDrone"))
             {
                 return File.ReadAllText(responseRoute);
@@ -74,7 +73,6 @@ namespace NMR_projekt.Controllers
                 droneCardsHtml += droneCard;
             }
 
-            // Replace the placeholder in index.html with all drone cards
             string fullIndexHtml = indexHtml.Replace("{{droneCards}}", droneCardsHtml);
 
             return fullIndexHtml;

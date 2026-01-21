@@ -15,7 +15,6 @@
         </div>
 
         <form method="POST" action="addNewDrone" enctype="multipart/form-data">
-            <!-- Basic Information -->
             <div class="form-section">
                 <h2>📋 Basic Information</h2>
                 <div class="form-grid">
@@ -49,63 +48,59 @@
 
                     <div class="form-group full-width">
                         <label>Description</label>
-                        <textarea name="description" placeholder="Describe the drone's features and capabilities..."></textarea>
+                        <textarea required name="description" placeholder="Describe the drone's features and capabilities..."></textarea>
                     </div>
                 </div>
             </div>
 
-            <!-- Technical Specifications -->
             <div class="form-section">
                 <h2>⚙️ Technical Specifications</h2>
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Flight Time (minutes)</label>
-                        <input type="number" name="flightTime" placeholder="e.g., 30">
+                        <input required type="number" name="flightTime" placeholder="e.g., 30">
                     </div>
 
                     <div class="form-group">
                         <label>Max Range (meters)</label>
-                        <input type="number" name="maxRange" placeholder="e.g., 10000">
+                        <input required type="number" name="maxRange" placeholder="e.g., 10000">
                     </div>
 
                     <div class="form-group">
                         <label>Max Speed (km/h)</label>
-                        <input type="number" name="maxSpeed" step="0.1" placeholder="e.g., 75.6">
+                        <input required type="number" name="maxSpeed" step="0.1" placeholder="e.g., 75.6">
                     </div>
 
                     <div class="form-group">
                         <label>Weight (grams)</label>
-                        <input type="number" name="weight" step="0.1" placeholder="e.g., 895">
+                        <input required type="number" name="weight" step="0.1" placeholder="e.g., 895">
                     </div>
 
                     <div class="form-group full-width">
                         <label>Camera Resolution</label>
-                        <input type="text" name="camera" placeholder="e.g., 4K/60fps">
+                        <input required type="text" name="camera" placeholder="e.g., 4K/60fps">
                     </div>
                 </div>
             </div>
 
-            <!-- Availability -->
             <div class="form-section">
                 <h2>📍 Availability</h2>
                 <div class="form-group">
                     <label>Available Shops</label>
-                    <textarea name="shops" placeholder="Zagreb - Ulica Kralja Tomislava IV, Split - Marmontova 15"></textarea>
+                    <textarea required name="shops" placeholder="Zagreb - Ulica Kralja Tomislava IV, Split - Marmontova 15"></textarea>
                     <div class="input-hint">Separate multiple shops with commas</div>
                 </div>
             </div>
 
-            <!-- Image Upload -->
             <div class="form-section">
                 <h2>📸 Drone Image</h2>
                 <div class="form-group">
                     <label>Upload Image</label>
-                    <input type="file" name="image" accept="image/*">
+                    <input required type="file" name="image" accept="image/*">
                     <div class="input-hint">Supported formats: JPG, PNG, WEBP (max 10MB)</div>
                 </div>
             </div>
 
-            <!-- Submit Buttons -->
             <div class="button-group">
                 <a href="/" class="cancel-btn">Cancel</a>
                 <button type="submit">

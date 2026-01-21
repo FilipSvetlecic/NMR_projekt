@@ -27,16 +27,13 @@ namespace NMR_projekt.Models
         private static void SeedDatabase(AppDbContext db)
         {
             
-            // Check if already seeded
             
             if (db.Users.Any())
             {
                 return;
             }
 
-            Console.WriteLine("Seeding database...");
 
-            // Add admin user
             var adminUser = new User
             {
                 Username = "admin",
@@ -47,7 +44,6 @@ namespace NMR_projekt.Models
             db.Users.Add(adminUser);
             db.SaveChanges();
 
-            // Add sample drones
             var drones = new List<Drone>
             {
                 new Drone
@@ -103,7 +99,6 @@ namespace NMR_projekt.Models
             db.Drones.AddRange(drones);
             db.SaveChanges();
 
-            Console.WriteLine($"✓ Database seeded! Users: {db.Users.Count()}, Drones: {db.Drones.Count()}");
         }
     }
 }

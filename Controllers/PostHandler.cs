@@ -53,12 +53,8 @@ namespace NMR_projekt.Controllers
                     string projectRoot = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
                     projectRoot = projectRoot.Replace("bin\\Debug", "");
 
-                    //NOVI KOD !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                    //DODAJ NOVU SLIKU KOJA ĆE BITI POSTAVLJENA SVAKI PUTA KADA SE SLIKA SKROZ NE PRENESE
-                    //SLIKA DA PRIJENOS NIJE BIO USPJEŠAN
                     if (imageBytes == Array.Empty<byte>())
                     {
-                        Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                         string blankImagePathDB = Path.Combine("/Images", "blank_picture.jpg");
                         fields[fieldName] = blankImagePathDB.Replace("\\", "/");
                         continue;
@@ -86,7 +82,6 @@ namespace NMR_projekt.Controllers
             }
 
 
-            // Print results
             Console.WriteLine("\n=== EXTRACTED DATA ===");
             foreach (var pair in fields)
             {
@@ -110,27 +105,20 @@ namespace NMR_projekt.Controllers
                 return Array.Empty<byte>();
             }
 
-            // Nađi početak sadržaja datoteke (iza \r\n\r\n)
             int contentStart = IndexOf(buffer, Encoding.ASCII.GetBytes("\r\n\r\n"), headerStart);
             if (contentStart == -1)
             {
                 return Array.Empty<byte>();
             }
-            contentStart += 4; // preskoči \r\n\r\n
+            contentStart += 4;
 
-            // Nađi idući boundary nakon početka slike
             byte[] boundaryBytes = Encoding.ASCII.GetBytes("\r\n" + boundary);
             int contentEnd = IndexOf(buffer, boundaryBytes, contentStart);
             if (contentEnd == -1)
             {
                 contentEnd = buffer.Length;
             }
-            //VAŽNO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            //SLIKA MOŽE DOĆI U VIŠE PAKETA ZBOG SEGMENTACIJE - OVAJ PROGRAM TO NE PODRŽAVA, PROGRAM ČITA SAMO JEDAN PAKET
-            //POTREBNO NAPRAVITI DIO PROGRAMA DA SE APLIKACIJE U BROWERSU NE SRUŠI KADA SLIKA DOĐE U VIŠE PAKETA
-            //SLIKA DOLAZI U VIŠE PAKETA KADA NA KRAJU PAKETA KOJI JE U BUFERU NIJE BOUNDARY
-            //U TOME SLUČAJU, KORISNIKA PREUSMJERI NA POČETNU STRANICU TE NEMOJ NIŠTA ZAPISIVATI U BAZU PODATAKA ILI 
-            //NEMOJ ZAPISATI SAMO SLIKU
+            
             if (contentEnd == buffer.Length)
             {
                 return Array.Empty<byte>();

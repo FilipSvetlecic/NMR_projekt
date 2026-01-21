@@ -1,0 +1,5 @@
+Članovi tima: Filip Svetlečić, Lovro Špiljak, Matej Šanko
+
+Filip Svetlečić-aktivno sudjelovao u projektu, radio backend
+Lovro Špiljak-aktivno sudjelovao u projektu, radio dizajn i bazu podataka
+Matej Šanko-aktivno sudjelovao u projektu, radio dokumentaciju pomogao u implementaciji u backendu
